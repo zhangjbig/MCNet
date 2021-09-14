@@ -1,0 +1,158 @@
+num_classes: 3
+num_channels: 3
+image_size: [512, 512]
+train_dataset_dir: train_dataset
+eval_dataset_dir: eval_dataset_final
+eval_video_dir: eval_video
+eval_image_dir: eval_images
+
+save_model_dir: save_model
+save_image_dir: save_image_decay
+save_result_dir: save_result_final_decay
+image_save_frequency: 50
+model_save_frequency: 1
+
+
+net_names: [bisenetv1,unet, deeplabv3+, bisenetv2, u2net, ec3net, dfnnet, icnet, hrnet,pspnet, dfanet, bisenetv1, mcnet]
+# 
+unet:
+  batch_size: 2
+  learning_rate: 0.0003 
+  weight_decay: 0.0001
+  channel_factor: 1
+  optimizer: momentum
+  epochs: 300
+  iterations: 100000
+  lr_decay: 0.9
+
+deeplabv3+:
+  batch_size: 4
+  learning_rate: 0.0003 
+  weight_decay: 0.0001
+  channel_factor: 1
+  optimizer: momentum
+  epochs: 300
+  iterations: 100000
+  lr_decay: 0.9
+  
+dfnnet:
+  batch_size: 2
+  learning_rate: 0.0003 
+  weight_decay: 0.0001
+  channel_factor: 1
+  optimizer: momentum
+  epochs: 300
+  iterations: 100000
+  lr_decay: 0.9
+
+dfanet:
+  batch_size: 16 
+  learning_rate: 0.0003 
+  weight_decay: 0.0001
+  channel_factor: 1
+  optimizer: momentum
+  epochs: 300
+  iterations: 150000
+  lr_decay: 0.9
+
+u2net:
+  batch_size: 2
+  learning_rate: 0.0003 
+  weight_decay: 0.001
+  channel_factor: 1
+  optimizer: momentum
+  epochs: 300
+  iterations: 100000
+  lr_decay: 0.9
+
+
+hrnet:
+  batch_size: 2
+  learning_rate: 0.0003
+  weight_decay: 0.0001
+  channel_factor: 1
+  optimizer: momentum
+  epochs: 300
+  iterations: 100000
+  lr_decay: 0.9
+
+
+bisenetv1:
+  batch_size: 16
+  learning_rate: 0.0003 
+  weight_decay: 0.0001
+  channel_factor: 1
+  optimizer: momentum
+  epochs: 300
+  iterations: 100000
+  lr_decay: 0.9
+
+bisenetv2:
+  batch_size: 14 
+  learning_rate: 0.0003 
+  weight_decay: 0.0001
+  channel_factor: 1
+  optimizer: momentum
+  epochs: 300
+  iterations: 100000
+  lr_decay: 0.9
+
+
+mcnet:
+  batch_size: 12
+  learning_rate: 0.0003
+  weight_decay: 0.0001
+  channel_factor: 1
+  optimizer: momentum
+  epochs: 300
+  lr_decay: 0.9
+  iterations: 100000
+
+ec3net:
+  batch_size: 8
+  learning_rate: 0.0003 
+  weight_decay: 0.0001
+  channel_factor: 1
+  optimizer: momentum
+  epochs: 300
+  iterations: 100000
+  lr_decay: 0.9
+
+mcnet_wo_arm:
+  batch_size: 12
+  learning_rate: 0.0003
+  weight_decay: 0.0001
+  optimizer: momentum
+  epochs: 300
+  iterations: 100000
+  lr_decay: 0.8
+
+mcnet_wo_cam:
+  batch_size: 12
+  learning_rate: 0.0003
+  weight_decay: 0.0001
+  optimizer: momentum
+  epochs: 300
+  iterations: 100000
+  lr_decay: 0.8
+
+icnet:
+  batch_size: 12
+  learning_rate: 0.0003
+  weight_decay: 0.0001
+  channel_factor: 1
+  optimizer: momentum
+  epochs: 300
+  iterations: 150000
+  lr_decay: 0.9
+  loss_weight: [1, 0, 0.4, 0.16]
+
+pspnet:
+  batch_size: 3
+  learning_rate: 0.0003 
+  weight_decay: 0.0001
+  channel_factor: 1
+  optimizer: momentum
+  epochs: 300
+  iterations: 100000
+  lr_decay: 0.9
