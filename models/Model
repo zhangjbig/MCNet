@@ -1,0 +1,14 @@
+|Model|
+|---|
+|[UNet](./models/unet.py)|
+|[PSPNet](./models/pspnet.py)|
+|[HRNet](./models/hrnet.py)|
+|[ICNet](./models/icnet.py)|
+|[DFNNet](./models/dfnnet.py)|
+|[DFANet](./models/dfanet.py)|
+|[EC3Net](./models/ec3net.py)|
+|[DeepLabV3+](./models/deeplab.py)|
+|[U2Net](./models/u2net.py)|
+|[BiSeNetV1](./models/bisenetv1.py)|
+|[BiSeNetV2](./models/bisenetv2.py)|
+|[MCNet](./models/mcnet.py)|
